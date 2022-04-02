@@ -1,0 +1,43 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi", "Hey", "Is anyone there?", "Hello", "Hay"],
+     "responses": ["Hello", "Hi", "Hi there"]
+    },
+    {"tag": "goodbye",
+     "patterns": ["Bye", "See you later", "Goodbye"],
+     "responses": ["See you later", "Have a nice day", "Bye! Come back again"]
+    },
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks for the help"],
+     "responses": ["Happy to help!", "Any time!", "My pleasure", "You're most welcome!"]
+    },
+    {"tag": "about",
+     "patterns": ["Who are you?", "What are you?", "Who you are?"],
+     "responses": ["I'm BotName, your bot assistant", "I'm BotName, an Artificial Intelligent bot"]
+    },
+    {"tag": "name",
+    "patterns": ["what is your name", "what should I call you", "whats your name?"],
+    "responses": ["You can call me BotName.", "I'm BotName!", "Just call me BotName"]
+    },
+    {"tag": "help",
+    "patterns": ["Could you help me?", "give me a hand please", "Can you help?", "What can you do for me?", "I need a support", "I need a help", "support me please"],
+    "responses": ["Tell me how can assist you", "Tell me your problem to assist you", "Yes Sure, How can I support you"]
+     },
+    {"tag": "stress",
+    "patterns": ["I feel stressed", "I am feeling a lot of pressure", "I am very tensed ", "College is making me stressed"],
+    "responses": ["I find taking deep breaths very relaxing", "Meditation is a very calmimg activity, would you like to try it"]
+    },
+    {"tag": "anxiety",
+    "patterns": ["I am overwhelmed","I am anxious","anxiety","I am scared"],
+    "responses": ["How does a nap sound?", "Take a relaxing stroll"]
+    },
+    {"tag": "bored",
+    "patterns": ["I am so bored","I'm so bored","loss of interest","lost interest","tired of hobbies","I no longer enjoy my favorite","Nothing interest me"],
+    "responses": ["I'm so sorry you are no longer interested in your favourite things, I know it must be frustrating to handle so many things at once. Could I offer you a motivational quote","Sometimes our interests change and that is okay, we just need to keep a positive mind and feel grateful for what we have"]
+    },
+    {"tag": "alone",
+    "patterns": ["I feel alone","Unwanted","Isolated","My friends do not talk to me anymore","I am lonely","I'm lonely"],
+    "responses": ["I can understand, Its painful! Especially if you are in a room full of people you and still feel alone. Its perfectly okay. Everything takes time, but we learn to grow beyond our grief. It perfectly okay to feel the way you feel","Would you like to talk about it?"]
+    }
+]
+}
