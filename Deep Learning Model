@@ -34,7 +34,6 @@ for intent in data['intents']:
         
 num_classes = len(labels)
 
-
 lbl_encoder = LabelEncoder()
 lbl_encoder.fit(training_labels)
 training_labels = lbl_encoder.transform(training_labels)
@@ -50,7 +49,6 @@ word_index = tokenizer.word_index
 sequences = tokenizer.texts_to_sequences(training_sentences)
 padded_sequences = pad_sequences(sequences, truncating='post', maxlen=max_len)
 
-
 model = Sequential()
 model.add(Embedding(vocab_size, embedding_dim, input_length=max_len))
 model.add(GlobalAveragePooling1D())
@@ -63,7 +61,7 @@ model.compile(loss='sparse_categorical_crossentropy',
 
 model.summary()
 
-epochs = 500
+epochs = 1000
 history = model.fit(padded_sequences, np.array(training_labels), epochs=epochs)
 
 model.save("chat_model")
@@ -89,9 +87,8 @@ import pickle
 
 with open("intents.json") as file:
     data = json.load(file)
-
-
-def chat():
+    
+    def chat():
     model = keras.models.load_model('chat_model')
 
     with open('tokenizer.pickle', 'rb') as handle:
@@ -101,21 +98,22 @@ def chat():
         lbl_encoder = pickle.load(enc)
 
     max_len = 20
-    
     while True:
         print(Fore.LIGHTBLUE_EX + "User: " + Style.RESET_ALL, end="")
         inp = input()
-        if inp.lower() == "quit":
+        if inp.lower() == "quit" or inp.lower() == "bye":
             break
 
         result = model.predict(keras.preprocessing.sequence.pad_sequences(tokenizer.texts_to_sequences([inp]),
-                                             truncating='post', maxlen=max_len))
+                                              truncating='post', maxlen=max_len))
         tag = lbl_encoder.inverse_transform([np.argmax(result)])
+        print(tag)
 
         for i in data['intents']:
             if i['tag'] == tag:
                 print(Fore.GREEN + "ChatBot:" + Style.RESET_ALL , np.random.choice(i['responses']))
 
 
-print(Fore.YELLOW + "Start messaging with the bot (type quit to stop)!" + Style.RESET_ALL)
+print(Fore.YELLOW + "Start messaging with BotName (type quit or bye to stop)!" + Style.RESET_ALL)
 chat()
+    
