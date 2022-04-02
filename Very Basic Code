@@ -1,0 +1,64 @@
+name = "Ramya" 
+monsoon = "Sunny" 
+mood = "Happy"
+resp = {
+    "hello": [ 
+    "Hey!", 
+    "Hello there!"
+     ],
+        "what's your name?": [ 
+        "They call me {0}".format(name), 
+        "I usually go by {0}".format(name), 
+        "My name is {0}".format(name) ],
+    "what's today's weather?": [ 
+    "The weather is {0}".format(monsoon), 
+    "It's {0} today".format(monsoon)], 
+        "how are you?": [ 
+        "I am feeling {0}".format(mood), 
+        "{0}! How about you?".format(mood), 
+        "I am {0}! How about yourself?".format(mood) ],
+    "": [ 
+    "Hey! Are you there?", 
+    "What do you mean by that?",
+    "Could you repeat that?", "I get confused sometimes too...Do you mind explaining that again?"
+     ],
+        "default": [
+        "This is a default message"] }
+
+import random
+def res(message):
+    if message in resp: 
+        ramyabot_message = random.choice(resp[message])
+    else: 
+        ramyabot_message = random.choice(resp["default"])
+    return ramyabot_message
+
+print("Hey! I'm a mental health bot! How are you doing today?")
+
+def real(xtext):
+    if "hello" in xtext: 
+        ytext = "hello"
+    elif "name" in xtext: 
+        ytext = "what's your name?"
+    elif "weather" in xtext: 
+        ytext = "what's today's weather?"
+    elif "how are" in xtext: 
+        ytext = "how are you?"
+    else: 
+        ytext = ""
+    return ytext
+
+def send_message(message): 
+    print((message)) 
+    response = res(message) 
+    print((response))
+
+while 1: 
+    my_input = input()
+    if my_input == "exit" or my_input == "stop" or my_input == "bye":
+        print("Have a great day!")
+        break
+    else:
+        my_input = my_input.lower() 
+        related_text = real(my_input) 
+        send_message(related_text)
