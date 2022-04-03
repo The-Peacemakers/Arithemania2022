@@ -126,5 +126,5 @@ with open("intents.json") as file:
 
 print(Fore.YELLOW + "Start messaging with BotName (type quit or bye to stop)!" + Style.RESET_ALL)
 print("Enter q for a motivational quote")
-print("Enter t for a calming timer")
+print("Once you're done, enter t for a calming timer")
 chat()
