@@ -20,12 +20,12 @@
     "responses": ["You can call me BotName.", "I'm BotName!", "Just call me BotName"]
     },
     {"tag": "help",
-    "patterns": ["Could you help me?", "give me a hand please", "Can you help?", "What can you do for me?", "I need a support", "I need a help", "support me please"],
-    "responses": ["Tell me how can assist you", "Tell me your problem to assist you", "Yes Sure, How can I support you"]
+    "patterns": ["Could you help me?", "give me a hand please", "Can you help?", "What can you do for me?", "I need a support", "I need a help", "support me please","i want to vent"],
+    "responses": ["Tell me how can I assist you", "Tell me your problem to assist you", "Yes Sure, How can I support you?"]
      },
     {"tag": "stress",
-    "patterns": ["I feel stressed", "I am feeling a lot of pressure", "I am very tensed ", "College is stressful","I am stressed"],
-    "responses": ["I find taking deep breaths very relaxing", "Meditation is a very calmimg activity, would you like to try it"]
+    "patterns": ["I feel stress", "I am feeling a lot of pressure", "I am very tensed ", "College is stressful","I am stressed","stress","im stressed"],
+    "responses": ["I find taking deep breaths very relaxing", "Meditation is a very calmimg activity, would you like to try it?"]
     },
     {"tag": "anxiety",
     "patterns": ["I am overwhelmed","I am anxious","anxiety","I am scared"],
@@ -40,15 +40,15 @@
     "responses": ["I can understand, Its painful! Especially if you are in a room full of people you and still feel alone. Its perfectly okay. Everything takes time, but we learn to grow beyond our grief. It perfectly okay to feel the way you feel","Would you like to talk about it?"]
     },
 	{"tag": "angry",
-    "patterns": ["mad","irritated","annoyed","pissed off","ahhhhh","uncontrollably","I wanted to throw this","furious","The hell","The heck"],
+    "patterns": ["mad","irritated","annoyed","pissed off","uncontrollably","I wanted to throw this","furious","The hell","The heck","angry"],
     "responses": ["Take a timeout", "How about some exercise","Drink some water"]
     },
 	{"tag": "yes",
-    "patterns": ["yes"],
+    "patterns": ["yes","of course","i do"],
     "responses": ["In order to help you better, can you elaborate?", "Why?","What are you feeling?","Please vent! I’m all sensors :)"]
     },
 	{"tag": "no",
-    "patterns": ["no"],
+    "patterns": ["no","not yet","i dont"],
     "responses": ["It’s alright!","You can always come back to me later.","That’s ok :)"]
     },
 	{"tag": "sad",
@@ -57,7 +57,27 @@
     },
 	{"tag": "clinical",
     "patterns": ["I feel a pain in my chest","I can’t breathe","I feel my heart beating too fast","My stomach hurts","My chest hurts"],
-    "responses": ["Hmm… I'm concerned about you and your wellbeing, and I believe going to the doctor would help you take care of your health.In the meanwhile, take a deep breath,drink a glass of water and try to relax.While this could be a symptom of mental health, let us try to not take any risks with your physical health."]
-    }
+    "responses": ["Hmm… I'm concerned about you and your wellbeing, and I believe going to the doctor would help you take care of your health. In the meanwhile, take a deep breath,drink a glass of water and try to relax. While this could be a symptom of mental health, let us try to not take any risks with your physical health."]
+    },
+	{"tag": "guilt",
+     "patterns": ["I feel embarrassed", "shame", "uncomfortable","regret","guilty"],
+     "responses": ["Sometimes all you need to do is talk it out? You could talk to your friends and parents… However if you feel like you will be judged and/or uncomfortable.. You can always vent to me! IF so than vent away!","Take a break. During the break, accept what you are feeling. Accept that it is tough or challenging. Then ask yourself how you can take care of yourself right then","Ask yourself how you’d treat a friend experiencing the same struggle. What would you say to that friend? Try using those same words for yourself","Ask yourself how you’d treat a friend experiencing the same struggle. What would you say to that friend? Try using those same words for yourself"]
+    },
+	{"tag": "ambiguous",
+    "patterns": ["I feel weird","I am not okay","out of phase","I dont feel good"],
+    "responses": ["Could you please elaborate on that."]
+	},
+	{"tag": "exams",
+    "patterns": ["exam","exams","isa","esa","isas","esas","internals","finals","assessment","test","practicals","assignment","viva","too many isas"],
+    "responses": ["Go slowly, one step at a time. Don't rush anything. Try to set realistic goals.You can do this!!","Pace yourself through panicking, try not to think about all the lessons to be done at once.","The best way to predict your future is to create it. Great things never come from comfort.","Nothing is impossible. The word itself says: I’m possible~AUDREY HEPBURN.","Study in sessions, take small breaks and remember to stay hydrated.Good luck!","Calm down,jot down the things that need to be done, and go out and complete them like a pro!!You got this!!","Dont stress, do your best,forget the rest!!Always remember this quote:”I haven’t started either!”-every student ever"]   
+	},
+	{"tag": "happy",
+    "patterns": ["I am happy","better","secure","safe","positive","merry"],
+    "responses": ["Glad to know you feel that way! You can always approach me if you want to talk."]
+	},
+	{"tag": "motivation",
+    "patterns":["q"],
+    "responses": ["You’ve got to get up every morning with determination if you’re going to go to bed with satisfaction. —George Lorimer","Go as far as you can see; when you get there, you’ll be able to see further.—Thomas Carlyle","Your talent determines what you can do. Your motivation determines how much you’re willing to do. Your attitude determines how well you do it. —Lou Holtz","The individual who says it is not possible should move out of the way of those doing it.—Tricia Cunningham","I learned this, at least, by my experiment; that if one advances confidently in the direction of his dreams, and endeavors to live the life which he has imagined, he will meet with a success unexpected in common hours. —Henry David Thoreau","When someone tells me ‘no,’ it doesn’t mean I can’t do it, it simply means I can’t do it with them.—Karen E. Quinones Miller","Build your own dreams or someone else will hire you to build theirs. —Farrah Gray","Never give up on a dream just because of the time it will take to accomplish it. The time will pass anyway. —Earl Nightingale"]
+	}
 ]
 }
