@@ -13,15 +13,15 @@
     },
     {"tag": "about",
      "patterns": ["Who are you?", "What are you?", "Who you are?"],
-     "responses": ["I'm BotName, your bot assistant", "I'm BotName, an Artificial Intelligent bot"]
+     "responses": ["I'm SPIRIT BOT, your bot assistant", "I'm SPIRIT BOT, an Artificial Intelligent bot"]
     },
     {"tag": "name",
     "patterns": ["what is your name", "what should I call you", "whats your name?"],
-    "responses": ["You can call me BotName.", "I'm BotName!", "Just call me BotName"]
+    "responses": ["You can call me SPIRIT BOT.", "I'm SPIRIT BOT!", "Just call me SPIRIT BOT"]
     },
     {"tag": "help",
-    "patterns": ["Could you help me?", "give me a hand please", "Can you help?", "What can you do for me?", "I need a support", "I need a help", "support me please","i want to vent"],
-    "responses": ["Tell me how can I assist you", "Tell me your problem to assist you", "Yes Sure, How can I support you?"]
+    "patterns": ["Could you help me?", "give me a hand please", "Can you help?", "What can you do for me?", "I need a support", "I need a help", "support me please","i want to vent","confused","i dont know what to do"],
+    "responses": ["Sure. How are you feeling?", "Sure. Tell me your problem to assist you", "Yes Sure, How can I support you?"]
      },
     {"tag": "stress",
     "patterns": ["I feel stress", "I am feeling a lot of pressure", "I am very tensed ", "College is stressful","I am stressed","stress","im stressed"],
@@ -40,12 +40,12 @@
     "responses": ["I can understand, Its painful! Especially if you are in a room full of people you and still feel alone. Its perfectly okay. Everything takes time, but we learn to grow beyond our grief. It perfectly okay to feel the way you feel","Would you like to talk about it?"]
     },
 	{"tag": "angry",
-    "patterns": ["mad","irritated","annoyed","pissed off","uncontrollably","I wanted to throw this","furious","The hell","The heck","angry"],
+    "patterns": ["mad","irritated","annoyed","pissed off","uncontrollably","I wanted to throw this","furious","The hell","The heck","angry","I am angry"],
     "responses": ["Take a timeout", "How about some exercise","Drink some water"]
     },
 	{"tag": "yes",
     "patterns": ["yes","of course","i do"],
-    "responses": ["In order to help you better, can you elaborate?", "Why?","What are you feeling?","Please vent! I’m all sensors :)"]
+    "responses": ["In order to help you better, can you elaborate?", "What emotions are you feeling?","Please vent! I’m all sensors :)"]
     },
 	{"tag": "no",
     "patterns": ["no","not yet","i dont"],
@@ -72,12 +72,24 @@
     "responses": ["Go slowly, one step at a time. Don't rush anything. Try to set realistic goals.You can do this!!","Pace yourself through panicking, try not to think about all the lessons to be done at once.","The best way to predict your future is to create it. Great things never come from comfort.","Nothing is impossible. The word itself says: I’m possible~AUDREY HEPBURN.","Study in sessions, take small breaks and remember to stay hydrated.Good luck!","Calm down,jot down the things that need to be done, and go out and complete them like a pro!!You got this!!","Dont stress, do your best,forget the rest!!Always remember this quote:”I haven’t started either!”-every student ever"]   
 	},
 	{"tag": "happy",
-    "patterns": ["I am happy","better","secure","safe","positive","merry"],
+    "patterns": ["I am happy","better","secure","safe","positive","merry","good"],
     "responses": ["Glad to know you feel that way! You can always approach me if you want to talk."]
 	},
 	{"tag": "motivation",
     "patterns":["q"],
     "responses": ["You’ve got to get up every morning with determination if you’re going to go to bed with satisfaction. —George Lorimer","Go as far as you can see; when you get there, you’ll be able to see further.—Thomas Carlyle","Your talent determines what you can do. Your motivation determines how much you’re willing to do. Your attitude determines how well you do it. —Lou Holtz","The individual who says it is not possible should move out of the way of those doing it.—Tricia Cunningham","I learned this, at least, by my experiment; that if one advances confidently in the direction of his dreams, and endeavors to live the life which he has imagined, he will meet with a success unexpected in common hours. —Henry David Thoreau","When someone tells me ‘no,’ it doesn’t mean I can’t do it, it simply means I can’t do it with them.—Karen E. Quinones Miller","Build your own dreams or someone else will hire you to build theirs. —Farrah Gray","Never give up on a dream just because of the time it will take to accomplish it. The time will pass anyway. —Earl Nightingale"]
+	},
+	{"tag": "future",
+    "patterns": ["Sometimes I worry about my future a lot","I do not know what I should do next","Uncertain","uncertainty"],
+    "responses": ["It is trying to be uncertain about the future. The universe always conspires to fulfill your destiny, it can be trying sometimes, but it is always in your favour, even though it may seem like it is not."]
+	},
+	{"tag": "default",  
+	"patterns": [""],
+    "responses": ["Is there anything else you would like to put across","Are you feeling better now?","I hope you and your family are staying safe in these trying times."]
+    },
+	{"tag": "do",
+    "patterns": ["How do I communicate my thoughts to you?","Could you guide me through this?"],
+    "responses": ["You can always approach me if you want to talk. I am SPIRIT BOT. All you need to do is tell me how you are feeling and I will be your friend and console you, comfort you and calm you down. You can press q for a motivational quote. When you are done, just press t, and calm down along with our breathing timer."]
 	}
 ]
 }
