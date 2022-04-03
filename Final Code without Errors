@@ -39,7 +39,7 @@ lbl_encoder = LabelEncoder()
 lbl_encoder.fit(training_labels)
 training_labels = lbl_encoder.transform(training_labels)
 
-vocab_size = 1000
+vocab_size = 2500
 embedding_dim = 16
 max_len = 20
 oov_token = "<OOV>"
@@ -62,7 +62,7 @@ model.compile(loss='sparse_categorical_crossentropy',
 
 model.summary()
 
-epochs = 1000
+epochs = 2500
 history = model.fit(padded_sequences, np.array(training_labels), epochs=epochs)
 
 model.save("chat_model")
@@ -122,9 +122,9 @@ with open("intents.json") as file:
 
           for i in data['intents']:
               if i['tag'] == tag:
-                  print(Fore.GREEN + "BotName:" + Style.RESET_ALL , np.random.choice(i['responses']))
+                  print(Fore.GREEN + "SPIRIT BOT:" + Style.RESET_ALL , np.random.choice(i['responses']))
 
-print(Fore.YELLOW + "Start messaging with BotName (type quit or bye to stop)!" + Style.RESET_ALL)
+print(Fore.YELLOW + "Start messaging with SPIRIT BOT (type quit or bye to stop)!" + Style.RESET_ALL)
 print("Enter q for a motivational quote")
 print("Once you're done, enter t for a calming timer")
 chat()
